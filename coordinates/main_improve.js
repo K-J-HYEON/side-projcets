@@ -17,6 +17,8 @@ const tag = document.querySelector('.tag');
 // 정확한 크기를 받을 수가 있다.
 
 // 윈도우가 로드될 때 이것들을 처리할수 있게
+// 윈도우가 전부 다 load되면 target의 크기를 읽어와서
+// 사용자가 mousemove라는 event를 등록할 것이다.
 addEventListener('load', () => {
     const targetRect = target.getBoundingClientRect();
     const targetHalfWidth = targetRect.width / 2;
@@ -26,7 +28,7 @@ addEventListener('load', () => {
     // addEventListener을 등록한 다음에 mousemove
     // event에 있는 window위에서 움직이는 좌표를 받아와야 하기 때문에(창 위에 있는 X와 Y좌표를 받아와야 하니까)
     document.addEventListener('mousemove', event => {
-    // DOM요소들의 위치를 바꿔주면
+      // DOM요소들의 위치를 바꿔주면
       const x = event.clientX; // const 변수지정 x는 event에 있는 clientX이고
       const y = event.clientY; // y는 event에 있는 clientY이다.
       // console.log(`${x} ${y}`);
@@ -34,7 +36,6 @@ addEventListener('load', () => {
 
       // x와 y를 이용해서 요소들의 위치를 바꿔줌
       // style을 지정할 때는 px, 픽셀이라는 유닛을 붙여줘야한다. `키를 이용해서 x의 픽셀값을 전달
-    
       // left와 top 대신에 translate을 한번 이용
       //translate의 vertical은 X좌표를 이동해야 되기 때문에
       vertical.style.transform = `translateX(${x}px)`;
@@ -44,11 +45,9 @@ addEventListener('load', () => {
       tag.style.transform = `translate(${x}px, ${y}px)`;
       // tag안에 있는 innerhtml값을 이용해서 x 픽셀, y 픽셀 지정
       tag.innerHTML = `${x}px, ${y}px`;
+      tag.style.transform = `translate(${x + 20}px, ${y + 20}px)`;
     });
 })
-
-
-
 
 
 

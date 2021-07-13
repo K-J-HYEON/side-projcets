@@ -1,0 +1,54 @@
+/* 수평선 안나옴 */
+/* img에 클래스 타겟을 빼먹음 */
+
+body {
+  background: black;
+  /* 마진 0 */
+  margin: 0;
+}
+
+.line {
+  position: absolute;
+  background-color: white;
+}
+
+/* left와 top을 업데이트 하지 않기 때문에 계속
+꾸준하게 50%로 지정이 되어 있어서 그렇다. */
+/* translate이 일어나기 때문이다. */
+/* 그래서 기본값 지워줌 */
+.horizontal {
+  width: 100%;
+  height: 1px;
+  /* top: 50%; */
+}
+
+.vertical {
+  height: 100%;
+  width: 1px;
+  /* left: 50%; */
+}
+
+/* target과 tag도 50% 불필요한것들 지워준다. */
+.target {
+  position: absolute;
+  /* top: 50%;
+  left: 50%; */
+  transform: translate(-50%, -50%);
+}
+
+.tag {
+  color: white;
+  position: absolute;
+  /* top: 50%;
+  left: 50%; */
+  font-size: 38px;
+  /* 태그가 너무 붙어서 표시된다. */
+  /* 마진 적용 */
+  margin: 20px;
+  /* transition을 이용할 때도 opacity를 쓴다 그러면 */
+  /* opacity도 layout부터 발생하지 않으니까 */
+  /* 만약 top이나 left나 layout부터 발생할 수 있는 CSS의 속성값을 이용해서 애니메이션을 */
+  /* 하는 것은 좋지가 않다. */
+  transition: opacity;
+  /* transform: translate(20px, 20px); */
+}

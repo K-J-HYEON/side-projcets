@@ -12,7 +12,7 @@ document.addEventListener('mousemove', event => {
     const x = event.clientX; // const 변수지정 x는 event에 있는 clientX이고
     const y = event.clientY; // y는 event에 있는 clientY이다.
     console.log(`${x} ${y}`);
-    // console.log(`${event.clientX} ${event.clientX}`)
+    // console.log(`${event.clientX} ${event.clientY}`)
 
     // x와 y를 이용해서 요소들의 위치를 바꿔줌
     // style을 지정할 때는 px, 픽셀이라는 유닛을 붙여줘야한다. `키를 이용해서 x의 픽셀값을 전달
@@ -26,7 +26,7 @@ document.addEventListener('mousemove', event => {
     tag.style.top = `${y}px`;
     // tag안에 있는 innerhtml값을 이용해서 x 픽셀, y 픽셀 지정
     tag.innerHTML = `${x}px, ${y}px`;
-    
+
 });
 
 

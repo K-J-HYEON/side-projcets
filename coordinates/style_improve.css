@@ -49,6 +49,6 @@ body {
   /* opacity도 layout부터 발생하지 않으니까 */
   /* 만약 top이나 left나 layout부터 발생할 수 있는 CSS의 속성값을 이용해서 애니메이션을 */
   /* 하는 것은 좋지가 않다. */
-  transition: opacity;
+  /* transition: opacity; */
   /* transform: translate(20px, 20px); */
 }

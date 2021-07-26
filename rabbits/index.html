@@ -54,8 +54,10 @@
     // js에서 버튼클릭하면 토끼로 이동하게
     // 버튼 하나밖에 없어서 클래스 지정x(실제 프로젝트에서는 이렇게 하면 안된다.)
     // document의 queryselector을 이용한다.
+
     const button = document.querySelector('button');
     const rabbit = document.querySelector('#rabbit');
+
     // 버튼이 클릭되면 등록한 콜백힘수가 호출되게
     button.addEventListener('click', () => {
       // console.log('click!')

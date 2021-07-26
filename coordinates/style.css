@@ -6,6 +6,7 @@ body {
 }
 
 .line {
+  /* 원하는 곳에 자유자재로 할 수 있도록 */
   position: absolute;
   background-color: white;
 }
@@ -26,9 +27,11 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  /* 요소의 절반만큼 x에서 이동하고 높이에서 절반만큼 50%이동 */
   transform: translate(-50%, -50%);
 }
 
+/* 20px씩 떨어뜨린다 헬로표기 */
 .tag {
   color: white;
   position: absolute;
